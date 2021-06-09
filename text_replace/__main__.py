@@ -110,8 +110,8 @@ def main():
         # In `modeMap`, inside the second item on a list, one item may equal
         # `'<file>'` which is a placeholder for the actual filepath. Replace
         # this with the actual filepath.
-        mode[1] = [_file if arg == '<file>' else arg for arg in mode[1]]
-        mode[0](*mode[1])
+        modeArgs = [_file if arg == '<file>' else arg for arg in mode[1]]
+        mode[0](*modeArgs)
 
 if __name__ == '__main__':
     main()
