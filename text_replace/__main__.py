@@ -113,5 +113,6 @@ def main():
         modeArgs = [_file if arg == '<file>' else arg for arg in mode[1]]
         mode[0](*modeArgs)
 
+
 if __name__ == '__main__':
     main()
