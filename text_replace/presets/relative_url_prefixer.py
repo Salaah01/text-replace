@@ -12,7 +12,7 @@ def relative_url_prefixer(filePath: str, newText: str) -> None:
     """Prepends some text to a relative URL."""
     replace(
         filePath,
-        r'(?<!(\/|<|\w|:))((\/)(\w{0,}))',
+        r'(?<!(\/|<|\w|:))((\/)(\w{0,}))(?<!(\/))',
         f'{newText}\\2',
         False
     )
